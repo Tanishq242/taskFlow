@@ -4,7 +4,7 @@ A small task board app — boards contain columns, columns contain tasks. Built 
 
 ## Screenshot
 
-![Board view](screenshot\image.png)
+![Board view](./screenshot/image.png)
 
 ## Stack
 
