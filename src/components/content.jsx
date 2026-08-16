@@ -16,7 +16,7 @@ const content = (props) => {
 
     useEffect(() => {
         const fetchBoard = async () => {
-            const response = await fetch("http://localhost:3000/boards");
+            const response = await fetch("https://taskflow-qwce.onrender.com/boards");
             const data = await response.json();
             console.log(data);
             setBoard(data);
@@ -28,9 +28,9 @@ const content = (props) => {
     useEffect(() => {
         const fetchTask = async () => {
             try {
-                let url = "http://localhost:3000/task/" + props.priority
+                let url = "https://taskflow-qwce.onrender.com/task/" + props.priority
                 if (props.priority === 'all') {
-                    url = "http://localhost:3000/task";
+                    url = "https://taskflow-qwce.onrender.com/task";
                 }
                 const response = await fetch(url)
                 const data = await response.json();
@@ -76,7 +76,7 @@ const content = (props) => {
     useEffect(() => {
         const fetchTasks = async () => {
             try {
-                const response = await fetch("http://localhost:3000/task");
+                const response = await fetch("https://taskflow-qwce.onrender.com/task");
                 const data = await response.json();
 
                 const todoTasks = [];
@@ -115,7 +115,7 @@ const content = (props) => {
 
         const data = Object.fromEntries(formData.entries());
 
-        const response = await fetch("http://localhost:3000/addboard", {
+        const response = await fetch("https://taskflow-qwce.onrender.com/addboard", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -129,7 +129,7 @@ const content = (props) => {
 
     const handleDelete = async (taskId) => {
         try {
-            const response = await fetch(`http://localhost:3000/task/delete/${taskId}`, {
+            const response = await fetch(`https://taskflow-qwce.onrender.com/task/delete/${taskId}`, {
                 method: "DELETE",
             });
 
@@ -152,7 +152,7 @@ const content = (props) => {
             const formData = new FormData(e.target);
             const data = Object.fromEntries(formData.entries());
 
-            const response = await fetch(`http://localhost:3000/task/update/${editingTask.id}`, {
+            const response = await fetch(`https://taskflow-qwce.onrender.com/task/update/${editingTask.id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
@@ -235,7 +235,7 @@ const content = (props) => {
                 board_name: props.boardName
             };
 
-            const response = await fetch("http://localhost:3000/addtask", {
+            const response = await fetch("https://taskflow-qwce.onrender.com/addtask", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -271,7 +271,7 @@ const content = (props) => {
     const loadTodos = async (e) => {
         props.setBoardName(loadBoard)
         console.log(e.target.value)
-        const response = await fetch("http://localhost:3000/task");
+        const response = await fetch("https://taskflow-qwce.onrender.com/task");
         const data = await response.json();
         console.log(data);
 
