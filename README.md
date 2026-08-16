@@ -2,6 +2,8 @@
 
 A small task board app — boards contain columns, columns contain tasks. Built for the TaskFlow take-home assignment.
 
+## Vercel Link: https://task-flow-sooty-one.vercel.app/
+
 ## Screenshot
 
 ![Board view](./screenshot/image.png)
