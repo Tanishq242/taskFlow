@@ -350,34 +350,109 @@ form p {
 
 @media (max-width: 768px) {
     .board-form {
-        width: 75vw;
-        height: 65vw;
+        width: min(90%, 500px);
+        height: auto;
+        min-height: 250px;
+        padding: 20px;
     }
 
     .createboard-btn {
-        width: 40%;
+        width: 100%;
+        max-width: 200px;
     }
 
     .board-box {
         display: flex;
         flex-direction: column;
+        gap: 20px;
+        width: 100%;
     }
 
-    .to-do-box, .progress-box, .done-box {
-        width: 95vw;
-        margin-left: 10px;
+    .to-do-box,
+    .progress-box,
+    .done-box {
+        width: calc(100% - 20px);
+        margin: 0 10px;
     }
 
     .column-top {
-        width: 30vw;
+        width: 100%;
         padding-left: 10px;
+        box-sizing: border-box;
+    }
+
+    .task-form {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .save-btn {
+        width: 100%;
+        max-width: 150px;
+    }
+
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .board-form {
+        width: calc(100% - 30px);
+        padding: 15px;
+    }
+
+    .to-do-box,
+    .progress-box,
+    .done-box {
+        width: calc(100% - 20px);
+        margin: 0 10px;
+    }
+
+    .column-top {
+        padding-left: 5px;
+    }
+}
+
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .board-form {
+        width: 70%;
+        max-width: 600px;
+    }
+
+    .board-box {
+        gap: 15px;
+    }
+
+    .to-do-box,
+    .progress-box,
+    .done-box {
+        width: 30%;
+        margin-left: 0;
     }
 
     .task-form {
         width: 90%;
     }
+}
 
-    .save-btn {
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .board-form {
+        width: 500px;
+    }
+
+    .board-box {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .to-do-box,
+    .progress-box,
+    .done-box {
         width: 30%;
+        margin-left: 0;
     }
 }
