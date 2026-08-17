@@ -347,3 +347,37 @@ form p {
 .cancel-btn:hover {
     background-color: #f7f7f7;
 }
+
+@media (max-width: 768px) {
+    .board-form {
+        width: 75vw;
+        height: 65vw;
+    }
+
+    .createboard-btn {
+        width: 40%;
+    }
+
+    .board-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .to-do-box, .progress-box, .done-box {
+        width: 95vw;
+        margin-left: 10px;
+    }
+
+    .column-top {
+        width: 30vw;
+        padding-left: 10px;
+    }
+
+    .task-form {
+        width: 90%;
+    }
+
+    .save-btn {
+        width: 30%;
+    }
+}
